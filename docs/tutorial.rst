@@ -38,7 +38,7 @@ Tick the tools that you want to use:
                 environment. <em>Recommended especially if your use a third-party package that is still in a 0.x.x
                 release (which means that its API is not considered stable yet).</em></li>
             <li><input type="checkbox" checked onchange="switchVisibility(this, 'github')"> Github: collaborative
-                version control.
+                version control. In that case, you can use also:
             <ul style="list-style-type:none">
                 <li><input type="checkbox" checked onchange="switchVisibility(this, 'codecov')"> Codecov: check if
                     the unit tests cover the whole package.</li>
