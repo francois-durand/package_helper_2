@@ -32,6 +32,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         if: github.ref == 'refs/heads/master'
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
           BRANCH: gh-pages
           FOLDER: build/
