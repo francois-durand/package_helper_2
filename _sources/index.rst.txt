@@ -1,5 +1,5 @@
-Welcome to Package Helper's documentation!
-==========================================
+Welcome to Package Helper 2's documentation!
+============================================
 
 .. toctree::
    :maxdepth: 2

@@ -1,101 +1,101 @@
 <div class="pypi">
-<h3>Release a Version</h3>
-<p>Test your package:</p>
-<ol class="arabic">
-<li><p>Run the tests (in PyCharm and/or in <a href="https://travis-ci.com">Travis</a>).</p></li>
-<li class="codecov"><p>Check your coverage on <a href="https://codecov.io">Codecov</a> and add tests if necessary.</p></li>
-</ol>
-<p>In PyCharm:</p>
-<ol class="arabic">
-    <li><p>Check that all new classes are in the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>
-    and in the Reference section of the documentation.</p></li>
-<li><p>Generate the documentation locally in order to check that it is working.</p></li>
-    <li><p>If you were working on a secondary branch (which is desirable), do what you have to do: pull request to master, etc.</p></li>
-    <li><p>Ensure that you are now in the <em>master</em> branch.</p></li>
-<li><p>Update the file <code class="docutils literal notranslate"><span class="pre">HISTORY.rst</span></code>.
-Stick to pure <code class="docutils literal notranslate"><span class="pre">.rst</span></code> syntax: never use Sphinx' specific
-    directives such as <code class="docutils literal notranslate"><span class="pre">:class:`MyClass`</span></code>.</p></li>
-<li><p>In PyCharm's terminal, do one of the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">patch</span></code> (version x.y.z → x.y.(z+1)) when you made a backwards-compatible modification (such as a
-bug fix).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">minor</span></code> (version x.y.z → x.(y+1).0) when you added a functionality.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">major</span></code> (version x.y.z → (x+1).0.0) when you changed the API. Note: in versions 0.y.z, the API is
-not expected to be stable anyway.</p></li>
-</ul>
-</li>
-<li><p>Commit/push.</p></li>
-<li><p>Check that the documentation compiles on ReadTheDocs.</p></li>
-</ol>
+    <h3>Release a Version</h3>
+    <p>Test your package:</p>
+    <ol class="arabic">
+        <li><p>Run the tests (in PyCharm and/or with GitHub actions).</p></li>
+        <li class="codecov"><p>Check your coverage on <a href="https://codecov.io">Codecov</a> and add tests if
+            necessary.
+        </p></li>
+    </ol><p>In PyCharm:</p>
+    <ol class="arabic">
+        <li><p>Check that all new classes are in the file
+            <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>
+            and in the Reference section of the documentation.
+        </p></li>
+        <li><p>Generate the documentation locally in order to check that it is working.</p></li>
+        <li><p>If you were working on a secondary branch (which is desirable), do what you have to do: pull request to
+            master, etc.</p></li>
+        <li><p>Ensure that you are now in the <em>master</em> branch.</p></li>
+        <li><p>Update the file <code class="docutils literal notranslate"><span class="pre">HISTORY.rst</span></code>.
+            Stick to pure <code class="docutils literal notranslate"><span class="pre">.rst</span></code> syntax:
+            never use Sphinx' specific directives such as
+            <code class="docutils literal notranslate"><span class="pre">:class:`MyClass`</span></code>.
+        </p></li>
+        <li><p>In PyCharm's terminal, do one of the following:</p>
+            <ul class="simple">
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion patch</span></code>
+                    (version x.y.z → x.y.(z+1)) when you made a backwards-compatible modification (such as a
+                    bug fix).
+                </p></li>
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion minor</span></code>
+                    (version x.y.z → x.(y+1).0) when you added a functionality.
+                </p></li>
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion major</span></code>
+                    (version x.y.z → (x+1).0.0) when you changed the API. Note: in versions 0.y.z, the API is
+                    not expected to be stable anyway.
+                </p></li>
+            </ul>
+        </li>
+        <li><p>Commit/push.</p></li>
+        <li><p>Check that the documentation compiles on GitHub actions.</p></li>
+    </ol>
     <p>On <a href="https://github.com">GitHub's website</a>:</p>
     <ol class="arabic">
         <li><p>Go to “releases”.</p></li>
         <li><p>Select “Draft a new release”.</p></li>
-        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">v0.1.0</span></code>) and a message
-(e.g. <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">stable</span> <span class="pre">version</span></code>).</p></li>
+        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">v0.1.0</span></code>)
+            and a message (e.g.
+            <code class="docutils literal notranslate"><span class="pre">First stable version</span></code>).
+        </p></li>
         <li><p>Select “Publish release”.</p></li>
     </ol>
-<p>After a few minutes, Travis CI has finished the built and it is deployed on <a href="https://pypi.python.org/pypi">PyPI.</a></p>
+    <p>After a few minutes, GitHub has finished the built and it is deployed on
+        <a href="https://pypi.python.org/pypi">PyPI.</a>
+    </p>
 </div>
-
 
 
 <div class="pypi">
     <h3>If the Deployment on PyPI Fails...</h3>
-<p><em>Check that the readme will be correctly rendered on PyPI.</em></p>
-<p>In a terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">bdist</span>
-<span class="n">twine</span> <span class="n">check</span> <span class="n">dist</span><span class="o">/</span><span class="n">the_name_of_the_file</span><span class="o">.</span><span class="n">zip</span>
-</pre></div>
+    <p><em>Check that the readme will be correctly rendered on PyPI.</em></p>
+    <p>In a terminal:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre>
+        <span class="n">python setup.py bdist</span>
+        <span class="n">twine check dist/the_name_of_the_file.zip</span>
+    </pre></div></div>
+    <p>where <code class="docutils literal notranslate"><span class="pre">the_name_of_the_file</span></code>
+        must be replaced by the relevant file name.
+    </p>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">the_name_of_the_file</span></code> must be replaced by the relevant file name.</p>
-</div>
-
 
 
 <div>
-<h3>Add a Module (= a File)</h3>
-<p><em>Typically, this is a file <code class="docutils literal notranslate"><span class="pre">SubPackage\MyClass</span></code>, containing the class <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>.</em></p>
-<ol class="arabic simple">
-<li><p>In the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>: add the shortcut.</p></li>
-<li><p>In the file <code class="docutils literal notranslate"><span class="pre">reference.rst</span></code>: add the auto-documentation.</p></li>
-</ol>
-</div>
-
-
-
-<div>
-<h3>Use a Third-Party Package</h3>
-<p><em>For example, you want to use Numpy in your module.</em></p>
+    <h3>Add a Module (= a File)</h3>
+    <p><em>Typically, this is a file
+        <code class="docutils literal notranslate"><span class="pre">sub_package\my_class</span></code>, containing
+        the class <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>.
+    </em></p>
     <ol class="arabic simple">
-    <li><p>Open the file <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>.</p></li>
-    <li><p>In the list <code class="docutils literal notranslate"><span class="pre">requirements</span></code>, add the name of the package (e.g. <code class="docutils literal notranslate"><span class="pre">'numpy'</span></code>).</p></li>
+        <li><p>In the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>:
+            add the shortcut.
+        </p></li>
+        <li><p>In the file <code class="docutils literal notranslate"><span class="pre">reference.rst</span></code>:
+            add the auto-documentation.
+        </p></li>
     </ol>
 </div>
 
 
-
-<div class="pyup">
-<h3>When You Receive a Pull Request from Pyup</h3>
-    <p><em>You use some third-party packages for the development, such as
-        <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> or
-        <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. These packages and
-        their versions are listed in the file
-        <code class="docutils literal notranslate"><span class="pre">requirements_dev.txt</span></code> of your package.
-        Pyup informs you when a new version of these third-party packages is released: you receive a pull request in
-        GitHub and you just have to accept it.</em></p>
+<div>
+    <h3>Use a Third-Party Package</h3>
+    <p><em>For example, you want to use Numpy in your module.</em></p>
     <ol class="arabic simple">
-<li><p>On <a href="https://github.com">GitHub's website</a>:</p>
-<ol class="arabic simple">
-<li><p>Open the pull request.</p></li>
-<li><p>If necessary, wait until Travis CI has finished the build, so that you know there is no problem.</p></li>
-<li><p>Merge pull request.</p></li>
-<li><p>Confirm merge.</p></li>
-<li><p>Delete branch.</p></li>
-<li><p>In the front page, you Pyup badge should be up-to-date. If not, this is probably just a matter of time.
-You can go to <a href="https://pyup.io">Pyup's website</a>, click on the gear → reload.</p></li>
-</ol>
-</li>
-<li><p>In PyCharm, Menu VCS → Update project.</p></li>
-</ol>
+        <li><p>Open the file
+            <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>.
+        </p></li>
+        <li><p>In the list <code class="docutils literal notranslate"><span class="pre">requirements</span></code>,
+            add the name of the package (e.g.
+            <code class="docutils literal notranslate"><span class="pre">'numpy'</span></code>).
+        </p></li>
+    </ol>
 </div>

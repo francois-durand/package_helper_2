@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; Package Helper 0.10.0 documentation</title>
+  <title>Tutorial &mdash; Package Helper 2 0.1.0 documentation</title>
   
 
   
@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Contributing" href="contributing.html" />
-    <link rel="prev" title="Package Helper" href="readme.html" /> 
+    <link rel="prev" title="Package Helper 2" href="readme.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -52,7 +52,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Package Helper
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Package Helper 2
           
 
           
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.10.0
+                0.1.0
               </div>
             
           
@@ -89,7 +89,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="readme.html">Package Helper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Package Helper 2</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#preliminaries-once-and-for-all">Preliminaries: Once and for All</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-your-package">Create Your package</a></li>
@@ -114,7 +114,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Package Helper</a>
+          <a href="index.html">Package Helper 2</a>
         
       </nav>
 
@@ -166,8 +166,8 @@
             
   <div class="section" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
-<p>Package Helper helps you create, develop and maintain a package. If you use all the tools presented in this tutorial, things
-will work this way:</p>
+<p>Package Helper 2 helps you create, develop and maintain a package. If you use all the tools presented in this tutorial,
+things will work this way:</p>
 <ul>
 <li><p>You create the file structure of your package in less than a minute with <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>.</p></li>
 <li><p>You use the IDE <a class="reference external" href="https://www.jetbrains.com/pycharm">PyCharm</a>. It is configured to:</p>
@@ -181,15 +181,14 @@ will work this way:</p>
 <li><p>Your project is on <a class="reference external" href="https://github.com">GitHub</a>. When you push modifications:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://readthedocs.org">ReadTheDocs</a> automatically generates the documentation and publishes it online.</p></li>
-<li><p><a class="reference external" href="https://travis-ci.com">Travis-CI</a> automatically runs the unit tests on several versions of Python,</p></li>
+<li><p>GitHub automatically generates the documentation, and publishes it online if the branch is “master”,</p></li>
+<li><p>GitHub automatically runs the unit tests on several versions of Python.</p></li>
 <li><p><a class="reference external" href="https://codecov.io">Codecov</a> displays what parts of the package are covered by the unit tests.</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>When you make a <em>release</em> on GitHub, Travis-CI automatically publishes your package on <a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>. This way, any Python
+<li><p>When you make a <em>release</em> on GitHub, GitHub automatically publishes your package on <a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>. This way, any Python
 user can install it with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>.</p></li>
-<li><p><a class="reference external" href="https://pyup.io">Pyup</a> helps you keep your development requirements up to date, such as <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> or <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p></li>
 </ul>
 <p>Tick the tools that you want to use:</p>
 <form>
@@ -200,532 +199,431 @@ user can install it with <code class="docutils literal notranslate"><span class=
         <li><input type="checkbox" checked onchange="switchVisibility(this, 'github')"> Github: collaborative
             version control.
         <ul style="list-style-type:none">
-            <li><input type="checkbox" checked onchange="switchVisibility(this, 'readthedocs')"> ReadTheDocs: put a
-                beautiful documentation of the package on the web.</li>
-            <li><input type="checkbox" checked onchange="switchVisibility(this, 'travis')"> Travis-CI: run the unit
-                tests with different versions of Python.
-            <ul style="list-style-type:none">
-                <li><input type="checkbox" checked onchange="switchVisibility(this, 'pypi')"> PyPI: make the package
-                    installable with <code class="docutils literal notranslate"><span class="pre">pip</span>
-                    <span class="pre">install</span></code>.</li>
-                <li><input type="checkbox" checked onchange="switchVisibility(this, 'codecov')"> Codecov: check if
-                    the unit tests cover the whole package.</li>
-            </ul>
-            </li>
-            <li><input type="checkbox" checked onchange="switchVisibility(this, 'pyup')"> Pyup: maintain the
-                development requirements up to date. <em>Recommended for large projects.</em></li>
+            <li><input type="checkbox" checked onchange="switchVisibility(this, 'codecov')"> Codecov: check if
+                the unit tests cover the whole package.</li>
         </ul>
         </li>
     </ul><div class="section" id="preliminaries-once-and-for-all">
 <h2>Preliminaries: Once and for All<a class="headerlink" href="#preliminaries-once-and-for-all" title="Permalink to this headline">¶</a></h2>
 <div>
-<h3>Create Accounts on the Websites</h3>
-<p>Ensure that you have accounts (preferably with the same login) on:</p>
-<ul>
-    <li class="github"><p>
-        <a class="reference external" href="https://github.com">GitHub</a>,
-    </p></li>
-    <li class="readthedocs"><p>
-        <a class="reference external" href="https://readthedocs.org">ReadTheDocs</a>,
-    </p></li>
-    <li class="travis"><p>
-        <a class="reference external" href="https://travis-ci.com">Travis-CI</a>,
-    </p></li>
-    <li class="pypi"><p>
-        <a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>,
-    </p></li>
-    <li class="codecov"><p>
-        <a class="reference external" href="https://codecov.io">Codecov</a>,
-    </p></li>
-    <li class="pyup"><p>
-        <a class="reference external" href="https://pyup.io">Pyup</a>.
-    </p></li>
-</ul>
+    <h3>Create Accounts on the Websites</h3>
+    <p>Ensure that you have accounts (preferably with the same login) on:</p>
+    <ul>
+        <li class="github"><p><a class="reference external" href="https://github.com">GitHub</a>,</p></li>
+        <li class="pypi"><p><a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>,</p></li>
+        <li class="codecov"><p><a class="reference external" href="https://codecov.io">Codecov</a>,</p></li>
+    </ul>
 </div>
 
-
-
 <div>
-<h3>Install Cookiecutter</h3>
-<p>
-    In a terminal (e.g. Anaconda Prompt):
-</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cookiecutter</span></pre></div></div>
+    <h3>Install Cookiecutter</h3>
+    <p>In a terminal (e.g. Anaconda Prompt):</p>
+    <div class="highlight-default notranslate">
+        <div class="highlight">
+            <pre>
+                <span class="n">pip install cookiecutter</span>
+            </pre>
+        </div>
+    </div>
 </div>
 
-
-
 <div>
-<h3>Install Git</h3>
+    <h3>Install Git</h3>
     <p><em>Git will be used to download the package template that will be used by Cookiecutter.</em></p>
-<p>Install git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.
-    You may need to restart your computer.</p>
+    <p>Install git:
+        <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.
+        You may need to restart your computer.
+    </p>
 </div>
 
-
-
 <div>
-<h3>Change the Documentation Style in PyCharm</h3>
+    <h3>Change the Documentation Style in PyCharm</h3>
     <p><em>Perform this step only if you want to use the
         <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html">Numpy documentation
-            style</a>.</em></p>
-    <p>In the “Welcome to PyCharm” window (before you open a
-    project): Configure → Settings → Tools → Python Integrated Tools → Docstrings → Docstring format → NumPy.
-</p>
+            style</a>.
+    </em></p>
+    <p>In the “Welcome to PyCharm” window (before you open a project): Configure → Settings → Tools → Python Integrated
+        Tools → Docstrings → Docstring format → NumPy.
+    </p>
 </div>
-
-
 
 <div class='github'>
-<h3>Register Your GitHub Account in PyCharm</h3>
-<p>In PyCharm:</p>
-<ol class="arabic simple">
-<li><p>Menu File → Settings → Version Control → GitHub.</p></li>
-<li><p>Click on the “+” icon.</p></li>
-<li><p>Fill in the form and validate.</p></li>
-</ol>
-</div>
-
-
-
-<div class="readthedocs">
-<h3>Register Your GitHub Account in ReadTheDocs</h3>
-<p>On <a href="https://readthedocs.org">ReadTheDocs' website</a>: Paramètres → Comptes liés. Check that your GitHub account is listed here.</p>
-</div>
-
-
-
-<div class="travis">
-<h3>Install Travis Client on Your Computer</h3>
-<ul>
-<li><p>Under Windows:</p>
-<ol class="arabic simple">
-<li><p>Install Ruby (<a class="reference external" href="https://rubyinstaller.org/">https://rubyinstaller.org/</a> ).</p></li>
-<li><p>Run PyCharm as Administrator.</p></li>
-<li><p>In PyCharm's terminal, do: <code class="docutils literal notranslate"><span class="pre">gem</span> <span class="pre">install</span> <span class="pre">-V</span> <span class="pre">travis</span></code>. If it does not work, restart your computer
-and try again.</p></li>
-</ol>
-</li>
-<li><p>Under Debian, run as root:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cookie</span><span class="o">-</span><span class="n">cutter</span> <span class="n">ruby</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span> <span class="n">gcc</span>
-<span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">V</span> <span class="n">travis</span>
-</pre></div>
-</div>
-</li>
-<li><p>Under Ubuntu 16, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">V</span> <span class="n">travis</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<p>If you experience troubles installing travis, cf. <a class="reference external" href="https://github.com/travis-ci/travis.rb#installation">https://github.com/travis-ci/travis.rb#installation</a>.</p>
+    <h3>Register Your GitHub Account in PyCharm</h3>
+    <p>In PyCharm:</p>
+    <ol class="arabic simple">
+        <li><p>Menu File → Settings → Version Control → GitHub.</p></li>
+        <li><p>Click on the “+” icon.</p></li>
+        <li><p>Fill in the form and validate.</p></li>
+    </ol>
 </div>
 </div>
 <div class="section" id="create-your-package">
 <h2>Create Your package<a class="headerlink" href="#create-your-package" title="Permalink to this headline">¶</a></h2>
-<p>
-    <em>This section is adapted from:
-    <a class="reference external" href="https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html">https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html</a>.
-    Creating your package should take less than 5 minutes with the minimal options (cookiecutter + PyCharm), and less
-        than 30 minutes if you use all the goodies (GitHub, ReadTheDocs, Travis, etc).</em>
-</p>
-
+<p><em>This section is adapted from:
+    <a class="reference external" href="https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html">
+        https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html</a>.
+    Creating your package should take less than 5 minutes with the minimal options (cookiecutter + PyCharm),
+    and less than 30 minutes if you use all the goodies (Virtual environment, GitHub, etc).
+</em></p>
 
 
 <div>
-<h3>Generate Your Package with Cookiecutter</h3>
-<ol class="arabic">
-<li><p>Your project will need a project name (e.g. <em>My Toy Package</em>) and a project slug (typically <code class="docutils literal notranslate"><span class="pre">my_toy_package</span></code>).
-Before starting, check that your project slug is not used in <a href="https://pypi.python.org/pypi">PyPI</a>, <strong>even if you do not plan to use PyPI for the moment</strong>.</p></li>
-<li><p>In a terminal (e.g. Anaconda Prompt):</p>
-<ol class="arabic">
-<li><p>Go to the parent directory of where you want to put the directory of your package, e.g. <code class="docutils literal notranslate"><span class="pre">D:\GitHub\</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cookiecutter</span> <span class="pre">https://github.com/francois-durand/package_helper.git</span></code></p></li>
-<li><p>Answer the questions. Here is an example (some explanations follow):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">full_name</span> <span class="p">[</span><span class="n">F</span><span class="o">.</span> <span class="n">Durand</span><span class="p">]:</span> <span class="n">François</span> <span class="n">Durand</span>
-<span class="n">email</span> <span class="p">[</span><span class="n">fradurand</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span><span class="p">]:</span> <span class="n">fradurand</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>
-<span class="n">github_username</span> <span class="p">[</span><span class="n">francois</span><span class="o">-</span><span class="n">durand</span><span class="p">]:</span> <span class="n">francois</span><span class="o">-</span><span class="n">durand</span>
-<span class="n">project_name</span> <span class="p">[</span><span class="n">Python</span> <span class="n">Boilerplate</span><span class="p">]:</span> <span class="n">My</span> <span class="n">Toy</span> <span class="n">Package</span>
-<span class="n">project_slug</span> <span class="p">[</span><span class="n">my_toy_package</span><span class="p">]:</span>
-<span class="n">project_short_description</span> <span class="p">[</span><span class="n">Python</span> <span class="n">Boilerplate</span> <span class="n">contains</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">boilerplate</span>
-<span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="n">Python</span> <span class="n">package</span><span class="o">.</span><span class="p">]:</span> <span class="n">My</span> <span class="n">Toy</span> <span class="n">Package</span> <span class="n">is</span> <span class="n">a</span> <span class="n">beautiful</span>
-<span class="n">package</span><span class="o">.</span>
-<span class="n">pypi_username</span> <span class="p">[</span><span class="n">francois</span><span class="o">-</span><span class="n">durand</span><span class="p">]:</span>
-<span class="n">version</span> <span class="p">[</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">0</span><span class="p">]:</span>
-<span class="n">use_pytest</span> <span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-<span class="n">use_codecov</span> <span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-<span class="n">use_pypi_deployment_with_travis</span> <span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-<span class="n">add_pyup_badge</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span>
-<span class="n">Select</span> <span class="n">command_line_interface</span><span class="p">:</span>
-<span class="mi">1</span> <span class="o">-</span> <span class="n">No</span> <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="n">interface</span>
-<span class="mi">2</span> <span class="o">-</span> <span class="n">Click</span>
-<span class="mi">3</span> <span class="o">-</span> <span class="n">Argparse</span>
-<span class="n">Choose</span> <span class="kn">from</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-<span class="n">create_author_file</span> <span class="p">[</span><span class="n">y</span><span class="p">]:</span>
-<span class="n">Select</span> <span class="n">open_source_license</span><span class="p">:</span>
-<span class="mi">1</span> <span class="o">-</span> <span class="n">GNU</span> <span class="n">General</span> <span class="n">Public</span> <span class="n">License</span> <span class="n">v3</span>
-<span class="mi">2</span> <span class="o">-</span> <span class="n">MIT</span> <span class="n">license</span>
-<span class="mi">3</span> <span class="o">-</span> <span class="n">BSD</span> <span class="n">license</span>
-<span class="mi">4</span> <span class="o">-</span> <span class="n">ISC</span> <span class="n">license</span>
-<span class="mi">5</span> <span class="o">-</span> <span class="n">Apache</span> <span class="n">Software</span> <span class="n">License</span> <span class="mf">2.0</span>
-<span class="mi">6</span> <span class="o">-</span> <span class="n">Not</span> <span class="nb">open</span> <span class="n">source</span>
-<span class="n">Choose</span> <span class="kn">from</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-</pre></div>
+    <h3>Generate Your Package with Cookiecutter</h3>
+    <ol class="arabic">
+        <li><p>Your project will need a project name (e.g. <em>My Toy Package</em>) and a project slug (typically
+            <code class="docutils literal notranslate"><span class="pre">my_toy_package</span></code>). Before starting,
+            check that your project slug is not used in <a href="https://pypi.python.org/pypi">PyPI</a>,
+            <strong>even if you do not plan to use PyPI for the moment</strong>.
+        </p></li>
+        <li><p>In a terminal (e.g. Anaconda Prompt):</p>
+            <ol class="arabic">
+                <li><p>Go to the parent directory of where you want to put the directory of your package, e.g.
+                    <code class="docutils literal notranslate"><span class="pre">D:\GitHub\</span></code>.
+                </p></li>
+                <li><p><code class="docutils literal notranslate">
+                    <span class="pre">cookiecutter https://github.com/francois-durand/package_helper_2.git</span>
+                </code></p></li>
+                <li><p>Answer the questions. Here is an example (some explanations follow):</p>
+                    <div class="highlight-default notranslate"><div class="highlight"><pre>
+                        <span class="n">full_name [F. Durand]: François Durand</span>
+                        <span class="n">email [fradurand@gmail.com]: fradurand@gmail.com</span>
+                        <span class="n">github_username [francois-durand]: francois-durand</span>
+                        <span class="n">project_name [Python Boilerplate]: My Toy Package</span>
+                        <span class="n">project_slug [my_toy_package]:</span>
+                        <span class="n">project_short_description [Python Boilerplate contains all the boilerplate
+                            you need to create a Python package.]: My Toy Package is a beautiful package.</span>
+                        <span class="n">version [0.1.0]:</span>
+                        <span class="n">use_pytest [y]:</span>
+                        <span class="n">use_codecov [y]:</span>
+                        <span class="n">Select command_line_interface:</span>
+                        <span class="mi">1 - No command-line interface</span>
+                        <span class="mi">2 - Click</span>
+                        <span class="mi">3 - Argparse</span>
+                        <span class="n">Choose from 1, 2, 3 (1, 2, 3) [1]:</span>
+                        <span class="n">create_author_file [y]:</span>
+                        <span class="n">Select open_source_license:</span>
+                        <span class="mi">1 - GNU General Public License v3</span>
+                        <span class="mi">2 - MIT license</span>
+                        <span class="mi">3 - BSD license</span>
+                        <span class="mi">4 - ISC license</span>
+                        <span class="mi">5 - Apache Software License 2.0</span>
+                        <span class="mi">6 - Not open source</span>
+                        <span class="n">Choose from 1, 2, 3, 4, 5, 6 (1, 2, 3, 4, 5, 6) [1]:</span>
+                    </pre></div></div>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <p>Some explanations now:</p>
+    <ul class="simple">
+        <li><p><code class="docutils literal notranslate"><span class="pre">use_pytest</span></code>: there are
+            essentially three ways to do unit tests in Python: unittest (the standard solution), pytest (the
+            recommended test package) and doctest (where tests are integrated in the docstrings). If you are new to
+            testing, I suggest using doctest. But even so, pytest is useful to configure your tests (as we will do a
+            bit later). For this reason, in all cases, I suggest to answer <em>yes</em>.
+        </p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">use_codecov</span></code>: you use Codecov
+            to assess the coverage of your code by your tests.
+        </p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">Click</span></code>
+            and <code class="docutils literal notranslate"><span class="pre">Argparse</span></code> allow you
+            to easily call your program with unix-style command, e.g.
+            <code class="docutils literal notranslate"><span class="pre">python my_program.py --help</span></code>.
+            You can choose either of them without harm, even if you do not use it for the moment. But personally,
+            I answer <em>no</em>.
+        </p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">create_author_file</span></code>: I
+            suggest to answer <em>yes</em>.
+        </p></li>
+    </ul>
+    <p>In PyCharm, choose "Open a project" and select the directory of your package: the whole file structure is in
+        there!
+    </p>
 </div>
-</li>
-</ol>
-</li>
-</ol>
-<p>Some explanations now:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">use_pytest</span></code>: there are essentially three ways to do unit tests in Python: unittest (the standard solution),
-pytest (the recommended test package) and doctest (where tests are integrated in the docstrings). If you are new to
-testing, I suggest using doctest. But even so, pytest is useful to configure your tests (as we will do a bit
-later). For this reason, in all cases, I suggest to answer <em>yes</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_codecov</span></code>: you use Codecov to assess the coverage of your code by your tests.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_pypi_deployment_with_travis</span></code>: when you make a <em>release</em> on GitHub, Travis CI automatically publishes
-your package on PyPI.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">add_pyup_badge</span></code>: a Pyup badge appears in the readme of your package. I suggest to answer <em>no</em>, even if you use Pyup.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Click</span></code> and <code class="docutils literal notranslate"><span class="pre">Argparse</span></code> allow you
-    to easily call your program with unix-style command, e.g. <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_program.py</span> <span class="pre">--help</span></code>.
-    You can choose either of them without harm, even if you do not use it for the moment. But personally, I answer <em>no</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_author_file</span></code>: I suggest to answer <em>yes</em>.</p></li>
-</ul>
-    <p>In PyCharm, choose "Open a project" and select the directory of your package: the whole file structure is in there!</p>
-</div>
-
 
 
 <div class="venv">
-<h3>Create a Virtual Environment</h3>
-<p><em>A virtual environment is essentially a Python installation dedicated to your project, with its own versions
-of the third-party packages. It ensures that if you reuse this project several months later, it will still work…</em></p>
+    <h3>Create a Virtual Environment</h3>
+    <p><em>A virtual environment is essentially a Python installation dedicated to your project, with its own versions
+        of the third-party packages. It ensures that if you reuse this project several months later, it will still
+        work…
+    </em></p>
     <p>In PyCharm:</p>
-<ol class="arabic simple">
-<li><p>Menu File → Settings → Project → Project Interpreter. (For Apple users: PyCharm → Preferences → Project →
-Project Interpreter.)</p></li>
-<li><p>Click on the gear-shaped icon → Add.</p></li>
-<li><p>Fill in the form: New environment using Virtualenv. This directory proposed is just fine. Validate.</p></li>
-</ol>
+    <ol class="arabic simple">
+        <li><p>Menu File → Settings → Project → Project Interpreter. (For Apple users: PyCharm → Preferences →
+            Project → Project Interpreter.)
+        </p></li>
+        <li><p>Click on the gear-shaped icon → Add.</p></li>
+        <li><p>Fill in the form: New environment using Virtualenv. This directory proposed is just fine.
+            Validate.
+        </p></li>
+    </ol>
 </div>
 
 
-
 <div>
-<h3>Install Dev Requirements</h3>
+    <h3>Install Dev Requirements</h3>
     <p><em>The file <code class="docutils literal notranslate"><span class="pre">requirements_dev.txt</span></code>
         contains the list of the third-party packages that you need for development, such as
         <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> or
         <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, but
         that the end-user does not need when using your package.</em></p>
-<p>In PyCharm's terminal:</p>
-<ol class="arabic">
-<li><p>Ensure you are in the directory of your package (e.g. <code class="docutils literal notranslate"><span class="pre">D:\GitHub\my_toy_package</span></code>).</p></li>
-<li class="venv"><p>Ensure that your virtual environment is activated: there should be <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> at the beginning of
-the line. If not:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Windows</span><span class="p">:</span> <span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
-<span class="n">Linux</span><span class="p">:</span>   <span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
-</pre></div>
-</div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements_dev.txt</span></code></p></li>
-</ol>
+    <p>In PyCharm's terminal:</p>
+    <ol class="arabic">
+        <li><p>Ensure you are in the directory of your package (e.g.
+            <code class="docutils literal notranslate"><span class="pre">D:\GitHub\my_toy_package</span></code>).
+        </p></li>
+        <li class="venv"><p>Ensure that your virtual environment is activated: there should be
+            <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> at the beginning of
+            the line. If not:</p>
+            <div class="highlight-default notranslate"><div class="highlight"><pre>
+                <span class="n">Windows: venv\Scripts\activate</span>
+                <span class="n">Linux:   source venv/bin/activate</span>
+            </pre></div></div>
+        </li>
+        <li><p>
+            <code class="docutils literal notranslate"><span class="pre">pip install -r requirements_dev.txt</span>
+            </code>
+        </p></li>
+    </ol>
     <p><em>Linux users: if cryptography is already installed with apt-get install, you may need to uninstall it before
-    pip-installing the dev requirements.</em></p>
+        pip-installing the dev requirements.
+    </em></p>
 </div>
 
 
-
 <div>
-<h3>Install Your Package in “Development Mode”</h3>
-    <p><em>This way, your package behaves as if it were installed, but any change you make will have effect immediately.</em></p>
+    <h3>Install Your Package in “Development Mode”</h3>
+    <p><em>This way, your package behaves as if it were installed, but any change you make will have effect
+        immediately.
+    </em></p>
     <p>In PyCharm's terminal, you should still be in the directory of your package. Do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span>
-</pre></div>
+    <div class="highlight-default notranslate"><div class="highlight"><pre>
+        <span class="n">python setup.py develop</span>
+    </pre></div>
+    </div>
 </div>
-</div>
-
 
 
 <div>
-<h3>Add a Run Configuration for the Documentation</h3>
-<p>In PyCharm:</p>
-<ol class="arabic simple">
-<li><p>In the root of your project, add a directory named <code class="docutils literal notranslate"><span class="pre">build</span></code>.</p></li>
-<li><p>Menu Run → Edit Configurations.</p></li>
-<li><p>Plus icon (top left) → Python docs → Sphinx task.</p></li>
-<li><p>Give a name to the configuration, e.g. <code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">docs</span></code>.</p></li>
-<li><p>Input: the “docs” directory of your project.</p></li>
-<li><p>Output: the “build” directory of your project.</p></li>
-<li><p>OK.</p></li>
-</ol>
+    <h3>Add a Run Configuration for the Documentation</h3>
+    <p>In PyCharm:</p>
+    <ol class="arabic simple">
+        <li><p>In the root of your project, add a directory named
+            <code class="docutils literal notranslate"><span class="pre">build</span></code>.
+        </p></li>
+        <li><p>Menu Run → Edit Configurations.</p></li>
+        <li><p>Plus icon (top left) → Python docs → Sphinx task.</p></li>
+        <li><p>Give a name to the configuration, e.g.
+            <code class="docutils literal notranslate"><span class="pre">Generate docs</span></code>.
+        </p></li>
+        <li><p>Input: the “docs” directory of your project.</p></li>
+        <li><p>Output: the “build” directory of your project.</p></li>
+        <li><p>OK.</p></li>
+    </ol>
     <p>Run this configuration: you should have a warning “Title underline too short”.</p>
     <ol class="arabic simple">
         <li><p>Go to the mentioned file and correct the problem.</p></li>
         <li><p>Run the configuration again: normally, it generates the documentation.</p></li>
-        <li><p>To
-check the result, you can open the file <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.</p></li>
+        <li><p>To check the result, you can open the file
+            <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
+        </p></li>
     </ol>
-    <p><em>The template contains examples of classes, such as the file <code class="docutils literal notranslate"><span class="pre">MyClass1.py</span></code>.
-        You can use them as models if you are new to Sphinx documentation.</em></p>
+    <p><em>The template contains examples of classes, such as the file
+        <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
+        You can use them as models if you are new to Sphinx documentation.
+    </em></p>
 </div>
-
 
 
 <div>
-<h3>Add a Run Configuration for the Unit Tests</h3>
-<p>In PyCharm:</p>
-<ol class="arabic simple">
-<li><p>Menu Run → Edit Configurations.</p></li>
-<li><p>Add a new configuration by clicking the + button → Python tests → pytest.</p></li>
-<li><p>Give a name to the configuration, e.g. <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">tests</span></code>.</p></li>
-<li><p>Ignore the warning and validate.</p></li>
-</ol>
-<p>Run this configuration: normally, it runs all the tests of the project.</p>
-    <p><em>If you are new to testing, you can take example from the classes provided by the template, such as <code class="docutils literal notranslate"><span class="pre">MyClass1.py</span></code>.</em></p>
+    <h3>Add a Run Configuration for the Unit Tests</h3>
+    <p>In PyCharm:</p>
+    <ol class="arabic simple">
+        <li><p>Menu Run → Edit Configurations.</p></li>
+        <li><p>Add a new configuration by clicking the + button → Python tests → pytest.</p></li>
+        <li><p>Give a name to the configuration, e.g.
+            <code class="docutils literal notranslate"><span class="pre">All tests</span></code>.
+        </p></li>
+        <li><p>Ignore the warning and validate.</p></li>
+    </ol>
+    <p>Run this configuration: normally, it runs all the tests of the project.</p>
+    <p><em>If you are new to testing, you can take example from the classes provided by the template, such as
+        <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
+    </em></p>
 </div>
-
 
 
 <div class="github">
-<h3>Create the GitHub Repo</h3>
-<p>In PyCharm:</p>
-<ol class="arabic">
-<li><p>Menu VCS → Import into version control → Share project on GitHub.</p></li>
-<li><p>Fill in the form and validate, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">New</span> <span class="n">repository</span> <span class="n">name</span><span class="p">:</span> <span class="n">my_toy_package</span>
-<span class="n">Remote</span> <span class="n">name</span><span class="p">:</span> <span class="n">origin</span>
-<span class="n">Description</span><span class="p">:</span> <span class="n">My</span> <span class="n">Toy</span> <span class="n">Package</span> <span class="n">is</span> <span class="n">a</span> <span class="n">beautiful</span> <span class="n">package</span><span class="o">.</span>
-</pre></div>
+    <h3>Create the GitHub Repo</h3>
+    <p>In PyCharm:</p>
+    <ol class="arabic">
+        <li><p>Menu VCS → Import into version control → Share project on GitHub.</p></li>
+        <li><p>Fill in the form and validate, e.g.:</p>
+            <div class="highlight-default notranslate"><div class="highlight"><pre>
+                <span class="n">New repository name: my_toy_package</span>
+                <span class="n">Remote name: origin</span>
+                <span class="n">Description: My Toy Package is a beautiful package.</span>
+            </pre></div></div>
+        </li>
+    </ol>
+    <p>In a browser, you can go to your <a href="https://github.com">GitHub</a> account to check that everything is
+        there.
+    </p>
 </div>
-</li>
-</ol>
-    <p>In a browser, you can go to your <a href="https://github.com">GitHub</a> account to check that everything is there.</p>
-</div>
-
-
-
-<div class="readthedocs">
-<h3>Set up ReadTheDocs</h3>
-<p>On <a href="https://readthedocs.org">ReadTheDocs' website</a>:</p>
-<ol class="arabic">
-    <li><p>Go to “My Projects”.</p></li>
-    <li><p>Import a Project → Importer manuellement.</p></li>
-    <li><p>Fill in the form and validate, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_toy_package</span>
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">francois</span><span class="o">-</span><span class="n">durand</span><span class="o">/</span><span class="n">my_toy_package</span>
-<span class="n">Git</span>
-</pre></div>
-</div>
-</li>
-    <li><p>Admin → Advanced settings.</p></li>
-    <li><p>Check “Installer votre projet dans un virtualenv via setup.py install”.</p></li>
-    <li><p>Validate.</p></li>
-</ol>
-</div>
-
-
-
-<div class="travis">
-<h3>Set up Travis CI</h3>
-<ol class="arabic">
-<li><p>On <a href="https://travis-ci.com">Travis' website</a>:</p>
-<ol class="arabic simple">
-<li><p>Login using your Github credentials.</p></li>
-<li><p>It may take a few minutes for Travis CI to load up a list of all your GitHub repos. If you do not see your
-new repo, log out and log in again.</p></li>
-<li><p>Click on your new repo.</p></li>
-<li><p>Click on “Activate repository”.</p></li>
-</ol>
-</li>
-<li class="pypi"><p>In PyCharm's terminal, ensure that you are in the directory of your project and:
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">travis</span> <span class="n">encrypt</span> <span class="o">--</span><span class="n">add</span> <span class="n">deploy</span><span class="o">.</span><span class="n">password</span> <span class="s2">&quot;My PyPI password&quot;</span> <span class="o">--</span><span class="n">com</span>
-</pre></div>
-</div>
-<p>(replace with your actual password, in quotation marks).</p></p>
-</li>
-<li class="pypi"><p>Open the file <code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code>, which is in the root of your project (you can do so in PyCharm). Check that
-<code class="docutils literal notranslate"><span class="pre">deploy.password.secure</span></code> is encoded.</p></li>
-</ol>
-</div>
-
-
-
-<div class="pyup">
-<h3>Set up Pyup</h3>
-<ol class="arabic">
-<li><p>On <a href="https://pyup.io">Pyup's website</a>:
-<ol class="arabic simple">
-<li><p>Click on the green <em>Add Repo</em> button and select the repo you created.</p></li>
-<li><p>A pop up appears. Personally, I checked the first item and unchecked the two others.</p></li>
-</ol>
-<p>Within a few minutes, you will probably receive a pull request in GitHub (and in your email).</p></p>
-</li>
-<li><p>On <a href="https://github.com">GitHub's website</a>, open the pull request and:</p>
-<ol class="arabic simple">
-<li><p>Merge pull request.</p></li>
-<li><p>Confirm merge.</p></li>
-<li><p>Delete branch.</p></li>
-</ol>
-</li>
-<li><p>In PyCharm, menu VCS → Update project. This does a git update (to get the modifications done by Pyup).</p></li>
-</ol>
-</div>
-
 
 
 <div class="github">
-<h3>Check That Everything Is Working</h3>
-<ol class="arabic simple">
-<li class="github"><p>In PyCharm, make a slight modification, e.g. in the file <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>. Then commit/push:</p>
-<ol class="arabic simple">
-<li><p>Menu VCS → Commit.</p></li>
-<li><p>Enter a commit message.</p></li>
-<li><p>Commit → Commit and push.</p></li>
-<li><p>Push.</p></li>
-</ol>
-</li>
-    <li class="travis"><p>On <a href="https://travis-ci.com">Travis' website</a>:</p>
-<ol class="arabic simple">
-<li><p>Go to Build History.</p></li>
-<li><p>The build should be a success (it may take several minutes).</p></li>
-</ol>
-</li>
-    <li class="codecov"><p>On <a href="https://codecov.io">Codecov's website</a>:</p>
-<ol class="arabic simple">
-<li><p>Log in with your GitHub account.</p></li>
-<li><p>Click on your name.</p></li>
-<li><p>Select your package.</p></li>
-<li><p>Once Travis has finished building, you can navigate in your project to see what parts of the code are covered by the tests.</p></li>
-</ol>
-</li>
-<li class="readthedocs"><p>On <a href="https://readthedocs.org">ReadTheDocs' website</a>:</p>
-<ol class="arabic simple">
-<li><p>In <em>Compilations</em>, the doc should be <em>transmis</em>.</p></li>
-<li><p>Open the documentation.</p></li>
-<li><p>In the table of contents, click on the first page (e.g. <em>My Toy Package</em>). Depending on your initial
-choice of options, you should have three to five <em>badges</em>:</p>
-<ol class="arabic simple">
-<li class="pypi"><p>PyPI: package or version not found (there will be the version number after your first release).</p></li>
-<li class="travis"><p>Build: passing.</p></li>
-<li><p>Docs: passing.</p></li>
-<li class="codecov"><p>Codecov: with a percentage.</p></li>
-<li class="pyup"><p>Pyup: up-to-date.</p></li>
-</ol>
-</li>
-<li><p>In the table of contents, click on <em>Reference</em>. You should see the documentation of the classes
-    provided by the template.</p></li>
-</ol>
-</li>
-</ol>
-<p class="pypi">If you wish, you are now ready to release your first version (cf. below).</p>
-</div>
+    <h3>Check That Everything Is Working</h3>
+
+    <ol class="arabic simple">
+        <li class="github"><p>In PyCharm, make a slight modification, e.g. in the file
+            <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
+            Then commit/push:</p>
+            <ol class="arabic simple">
+                <li><p>Menu VCS → Commit.</p></li>
+                <li><p>Enter a commit message.</p></li>
+                <li><p>Commit → Commit and push.</p></li>
+                <li><p>Push.</p></li>
+            </ol>
+        </li>
+
+        <li><p>On the GitHub page of your package:</p>
+            <ol class="arabic simple">
+                <li><p>Go to Actions.</p></li>
+                <li><p>The actions should be a success (it may take several minutes): build + docs.</p></li>
+                <li><p>Go to the GitHub Page of your project and check that the documentation is there.</p></li>
+                <li><p>In the table of contents, click on the first page (e.g. <em>My Toy Package</em>). Depending on
+                    your initial choice of options, you should have three to five <em>badges</em>:</p>
+                    <ol class="arabic simple">
+                        <li class="pypi"><p>PyPI: package or version not found (there will be the version number after
+                            your first release).</p></li>
+                        <li class="github"><p>Build: passing.</p></li>
+                        <li class="github"><p>Docs: passing.</p></li>
+                        <li class="codecov"><p>Codecov: with a percentage.</p></li>
+                    </ol>
+                </li>
+                <li><p>In the table of contents, click on <em>Reference</em>. You should see the documentation of the
+                    classes provided by the template.</p></li>
+            </ol>
+        </li>
+
+        <li class="codecov"><p>On <a href="https://codecov.io">Codecov's website</a>:</p>
+            <ol class="arabic simple">
+                <li><p>Log in with your GitHub account.</p></li>
+                <li><p>Click on your name.</p></li>
+                <li><p>Select your package.</p></li>
+                <li><p>Once GitHub has finished the "build" action, you can navigate in your project to see what parts
+                    of the code are covered by the tests.</p></li>
+            </ol>
+        </li>
+    </ol>
+
+    <p class="pypi">If you wish, you are now ready to release your first version (cf. below).</p>
 </div>
 </div>
 <div class="section" id="develop-and-maintain-your-package">
 <h2>Develop and Maintain Your Package<a class="headerlink" href="#develop-and-maintain-your-package" title="Permalink to this headline">¶</a></h2>
 <div class="pypi">
-<h3>Release a Version</h3>
-<p>Test your package:</p>
-<ol class="arabic">
-<li><p>Run the tests (in PyCharm and/or in <a href="https://travis-ci.com">Travis</a>).</p></li>
-<li class="codecov"><p>Check your coverage on <a href="https://codecov.io">Codecov</a> and add tests if necessary.</p></li>
-</ol>
-<p>In PyCharm:</p>
-<ol class="arabic">
-    <li><p>Check that all new classes are in the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>
-    and in the Reference section of the documentation.</p></li>
-<li><p>Generate the documentation locally in order to check that it is working.</p></li>
-    <li><p>If you were working on a secondary branch (which is desirable), do what you have to do: pull request to master, etc.</p></li>
-    <li><p>Ensure that you are now in the <em>master</em> branch.</p></li>
-<li><p>Update the file <code class="docutils literal notranslate"><span class="pre">HISTORY.rst</span></code>.
-Stick to pure <code class="docutils literal notranslate"><span class="pre">.rst</span></code> syntax: never use Sphinx' specific
-    directives such as <code class="docutils literal notranslate"><span class="pre">:class:`MyClass`</span></code>.</p></li>
-<li><p>In PyCharm's terminal, do one of the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">patch</span></code> (version x.y.z → x.y.(z+1)) when you made a backwards-compatible modification (such as a
-bug fix).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">minor</span></code> (version x.y.z → x.(y+1).0) when you added a functionality.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bumpversion</span> <span class="pre">major</span></code> (version x.y.z → (x+1).0.0) when you changed the API. Note: in versions 0.y.z, the API is
-not expected to be stable anyway.</p></li>
-</ul>
-</li>
-<li><p>Commit/push.</p></li>
-<li><p>Check that the documentation compiles on ReadTheDocs.</p></li>
-</ol>
+    <h3>Release a Version</h3>
+    <p>Test your package:</p>
+    <ol class="arabic">
+        <li><p>Run the tests (in PyCharm and/or with GitHub actions).</p></li>
+        <li class="codecov"><p>Check your coverage on <a href="https://codecov.io">Codecov</a> and add tests if
+            necessary.
+        </p></li>
+    </ol><p>In PyCharm:</p>
+    <ol class="arabic">
+        <li><p>Check that all new classes are in the file
+            <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>
+            and in the Reference section of the documentation.
+        </p></li>
+        <li><p>Generate the documentation locally in order to check that it is working.</p></li>
+        <li><p>If you were working on a secondary branch (which is desirable), do what you have to do: pull request to
+            master, etc.</p></li>
+        <li><p>Ensure that you are now in the <em>master</em> branch.</p></li>
+        <li><p>Update the file <code class="docutils literal notranslate"><span class="pre">HISTORY.rst</span></code>.
+            Stick to pure <code class="docutils literal notranslate"><span class="pre">.rst</span></code> syntax:
+            never use Sphinx' specific directives such as
+            <code class="docutils literal notranslate"><span class="pre">:class:`MyClass`</span></code>.
+        </p></li>
+        <li><p>In PyCharm's terminal, do one of the following:</p>
+            <ul class="simple">
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion patch</span></code>
+                    (version x.y.z → x.y.(z+1)) when you made a backwards-compatible modification (such as a
+                    bug fix).
+                </p></li>
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion minor</span></code>
+                    (version x.y.z → x.(y+1).0) when you added a functionality.
+                </p></li>
+                <li><p><code class="docutils literal notranslate"><span class="pre">bumpversion major</span></code>
+                    (version x.y.z → (x+1).0.0) when you changed the API. Note: in versions 0.y.z, the API is
+                    not expected to be stable anyway.
+                </p></li>
+            </ul>
+        </li>
+        <li><p>Commit/push.</p></li>
+        <li><p>Check that the documentation compiles on GitHub actions.</p></li>
+    </ol>
     <p>On <a href="https://github.com">GitHub's website</a>:</p>
     <ol class="arabic">
         <li><p>Go to “releases”.</p></li>
         <li><p>Select “Draft a new release”.</p></li>
-        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">v0.1.0</span></code>) and a message
-(e.g. <code class="docutils literal notranslate"><span class="pre">First</span> <span class="pre">stable</span> <span class="pre">version</span></code>).</p></li>
+        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">v0.1.0</span></code>)
+            and a message (e.g.
+            <code class="docutils literal notranslate"><span class="pre">First stable version</span></code>).
+        </p></li>
         <li><p>Select “Publish release”.</p></li>
     </ol>
-<p>After a few minutes, Travis CI has finished the built and it is deployed on <a href="https://pypi.python.org/pypi">PyPI.</a></p>
+    <p>After a few minutes, GitHub has finished the built and it is deployed on
+        <a href="https://pypi.python.org/pypi">PyPI.</a>
+    </p>
 </div>
-
 
 
 <div class="pypi">
     <h3>If the Deployment on PyPI Fails...</h3>
-<p><em>Check that the readme will be correctly rendered on PyPI.</em></p>
-<p>In a terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">bdist</span>
-<span class="n">twine</span> <span class="n">check</span> <span class="n">dist</span><span class="o">/</span><span class="n">the_name_of_the_file</span><span class="o">.</span><span class="n">zip</span>
-</pre></div>
+    <p><em>Check that the readme will be correctly rendered on PyPI.</em></p>
+    <p>In a terminal:</p>
+    <div class="highlight-default notranslate"><div class="highlight"><pre>
+        <span class="n">python setup.py bdist</span>
+        <span class="n">twine check dist/the_name_of_the_file.zip</span>
+    </pre></div></div>
+    <p>where <code class="docutils literal notranslate"><span class="pre">the_name_of_the_file</span></code>
+        must be replaced by the relevant file name.
+    </p>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">the_name_of_the_file</span></code> must be replaced by the relevant file name.</p>
-</div>
-
 
 
 <div>
-<h3>Add a Module (= a File)</h3>
-<p><em>Typically, this is a file <code class="docutils literal notranslate"><span class="pre">SubPackage\MyClass</span></code>, containing the class <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>.</em></p>
-<ol class="arabic simple">
-<li><p>In the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>: add the shortcut.</p></li>
-<li><p>In the file <code class="docutils literal notranslate"><span class="pre">reference.rst</span></code>: add the auto-documentation.</p></li>
-</ol>
-</div>
-
-
-
-<div>
-<h3>Use a Third-Party Package</h3>
-<p><em>For example, you want to use Numpy in your module.</em></p>
+    <h3>Add a Module (= a File)</h3>
+    <p><em>Typically, this is a file
+        <code class="docutils literal notranslate"><span class="pre">sub_package\my_class</span></code>, containing
+        the class <code class="docutils literal notranslate"><span class="pre">MyClass</span></code>.
+    </em></p>
     <ol class="arabic simple">
-    <li><p>Open the file <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>.</p></li>
-    <li><p>In the list <code class="docutils literal notranslate"><span class="pre">requirements</span></code>, add the name of the package (e.g. <code class="docutils literal notranslate"><span class="pre">'numpy'</span></code>).</p></li>
+        <li><p>In the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>:
+            add the shortcut.
+        </p></li>
+        <li><p>In the file <code class="docutils literal notranslate"><span class="pre">reference.rst</span></code>:
+            add the auto-documentation.
+        </p></li>
     </ol>
 </div>
 
 
-
-<div class="pyup">
-<h3>When You Receive a Pull Request from Pyup</h3>
-    <p><em>You use some third-party packages for the development, such as
-        <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> or
-        <code class="docutils literal notranslate"><span class="pre">pytest</span></code>. These packages and
-        their versions are listed in the file
-        <code class="docutils literal notranslate"><span class="pre">requirements_dev.txt</span></code> of your package.
-        Pyup informs you when a new version of these third-party packages is released: you receive a pull request in
-        GitHub and you just have to accept it.</em></p>
+<div>
+    <h3>Use a Third-Party Package</h3>
+    <p><em>For example, you want to use Numpy in your module.</em></p>
     <ol class="arabic simple">
-<li><p>On <a href="https://github.com">GitHub's website</a>:</p>
-<ol class="arabic simple">
-<li><p>Open the pull request.</p></li>
-<li><p>If necessary, wait until Travis CI has finished the build, so that you know there is no problem.</p></li>
-<li><p>Merge pull request.</p></li>
-<li><p>Confirm merge.</p></li>
-<li><p>Delete branch.</p></li>
-<li><p>In the front page, you Pyup badge should be up-to-date. If not, this is probably just a matter of time.
-You can go to <a href="https://pyup.io">Pyup's website</a>, click on the gear → reload.</p></li>
-</ol>
-</li>
-<li><p>In PyCharm, Menu VCS → Update project.</p></li>
-</ol>
+        <li><p>Open the file
+            <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>.
+        </p></li>
+        <li><p>In the list <code class="docutils literal notranslate"><span class="pre">requirements</span></code>,
+            add the name of the package (e.g.
+            <code class="docutils literal notranslate"><span class="pre">'numpy'</span></code>).
+        </p></li>
+    </ol>
 </div>
 </div>
 </div>
@@ -741,7 +639,7 @@ You can go to <a href="https://pyup.io">Pyup's website</a>, click on the gear �
         <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="readme.html" class="btn btn-neutral float-left" title="Package Helper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="readme.html" class="btn btn-neutral float-left" title="Package Helper 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
