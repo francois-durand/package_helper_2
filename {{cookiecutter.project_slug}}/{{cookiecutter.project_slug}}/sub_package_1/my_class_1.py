@@ -5,7 +5,7 @@ Copyright {{ cookiecutter.full_name }}
 
 This file is part of {{ cookiecutter.project_name }}.
 """
-from {{ cookiecutter.project_slug }}.SubPackage2.MyClass2 import MyClass2
+from {{ cookiecutter.project_slug }}.sub_package_2.my_class_2 import MyClass2
 
 
 class MyClass1:

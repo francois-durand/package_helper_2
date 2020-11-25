@@ -1,104 +1,51 @@
 <div>
-<h3>Create Accounts on the Websites</h3>
-<p>Ensure that you have accounts (preferably with the same login) on:</p>
-<ul>
-    <li class="github"><p>
-        <a class="reference external" href="https://github.com">GitHub</a>,
-    </p></li>
-    <li class="readthedocs"><p>
-        <a class="reference external" href="https://readthedocs.org">ReadTheDocs</a>,
-    </p></li>
-    <li class="travis"><p>
-        <a class="reference external" href="https://travis-ci.com">Travis-CI</a>,
-    </p></li>
-    <li class="pypi"><p>
-        <a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>,
-    </p></li>
-    <li class="codecov"><p>
-        <a class="reference external" href="https://codecov.io">Codecov</a>,
-    </p></li>
-    <li class="pyup"><p>
-        <a class="reference external" href="https://pyup.io">Pyup</a>.
-    </p></li>
-</ul>
+    <h3>Create Accounts on the Websites</h3>
+    <p>Ensure that you have accounts (preferably with the same login) on:</p>
+    <ul>
+        <li class="github"><p><a class="reference external" href="https://github.com">GitHub</a>,</p></li>
+        <li class="pypi"><p><a class="reference external" href="https://pypi.python.org/pypi">PyPI</a>,</p></li>
+        <li class="codecov"><p><a class="reference external" href="https://codecov.io">Codecov</a>,</p></li>
+    </ul>
 </div>
 
-
-
 <div>
-<h3>Install Cookiecutter</h3>
-<p>
-    In a terminal (e.g. Anaconda Prompt):
-</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cookiecutter</span></pre></div></div>
+    <h3>Install Cookiecutter</h3>
+    <p>In a terminal (e.g. Anaconda Prompt):</p>
+    <div class="highlight-default notranslate">
+        <div class="highlight">
+            <pre>
+                <span class="n">pip install cookiecutter</span>
+            </pre>
+        </div>
+    </div>
 </div>
 
-
-
 <div>
-<h3>Install Git</h3>
+    <h3>Install Git</h3>
     <p><em>Git will be used to download the package template that will be used by Cookiecutter.</em></p>
-<p>Install git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.
-    You may need to restart your computer.</p>
+    <p>Install git:
+        <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.
+        You may need to restart your computer.
+    </p>
 </div>
 
-
-
 <div>
-<h3>Change the Documentation Style in PyCharm</h3>
+    <h3>Change the Documentation Style in PyCharm</h3>
     <p><em>Perform this step only if you want to use the
         <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html">Numpy documentation
-            style</a>.</em></p>
-    <p>In the “Welcome to PyCharm” window (before you open a
-    project): Configure → Settings → Tools → Python Integrated Tools → Docstrings → Docstring format → NumPy.
-</p>
+            style</a>.
+    </em></p>
+    <p>In the “Welcome to PyCharm” window (before you open a project): Configure → Settings → Tools → Python Integrated
+        Tools → Docstrings → Docstring format → NumPy.
+    </p>
 </div>
-
-
 
 <div class='github'>
-<h3>Register Your GitHub Account in PyCharm</h3>
-<p>In PyCharm:</p>
-<ol class="arabic simple">
-<li><p>Menu File → Settings → Version Control → GitHub.</p></li>
-<li><p>Click on the “+” icon.</p></li>
-<li><p>Fill in the form and validate.</p></li>
-</ol>
-</div>
-
-
-
-<div class="readthedocs">
-<h3>Register Your GitHub Account in ReadTheDocs</h3>
-<p>On <a href="https://readthedocs.org">ReadTheDocs' website</a>: Paramètres → Comptes liés. Check that your GitHub account is listed here.</p>
-</div>
-
-
-
-<div class="travis">
-<h3>Install Travis Client on Your Computer</h3>
-<ul>
-<li><p>Under Windows:</p>
-<ol class="arabic simple">
-<li><p>Install Ruby (<a class="reference external" href="https://rubyinstaller.org/">https://rubyinstaller.org/</a> ).</p></li>
-<li><p>Run PyCharm as Administrator.</p></li>
-<li><p>In PyCharm's terminal, do: <code class="docutils literal notranslate"><span class="pre">gem</span> <span class="pre">install</span> <span class="pre">-V</span> <span class="pre">travis</span></code>. If it does not work, restart your computer
-and try again.</p></li>
-</ol>
-</li>
-<li><p>Under Debian, run as root:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cookie</span><span class="o">-</span><span class="n">cutter</span> <span class="n">ruby</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span> <span class="n">gcc</span>
-<span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">V</span> <span class="n">travis</span>
-</pre></div>
-</div>
-</li>
-<li><p>Under Ubuntu 16, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ruby</span><span class="o">-</span><span class="n">dev</span>
-<span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">V</span> <span class="n">travis</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<p>If you experience troubles installing travis, cf. <a class="reference external" href="https://github.com/travis-ci/travis.rb#installation">https://github.com/travis-ci/travis.rb#installation</a>.</p>
+    <h3>Register Your GitHub Account in PyCharm</h3>
+    <p>In PyCharm:</p>
+    <ol class="arabic simple">
+        <li><p>Menu File → Settings → Version Control → GitHub.</p></li>
+        <li><p>Click on the “+” icon.</p></li>
+        <li><p>Fill in the form and validate.</p></li>
+    </ol>
 </div>

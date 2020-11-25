@@ -2,14 +2,14 @@
 
 from distutils.core import setup
 setup(
-    name='package-helper',
+    name='package_helper_2',
     packages=[],
-    version='0.10.0',
-    description='Package Helper explains how to create, develop and maintain a Python package.',
+    version='0.1.0',
+    description='Package Helper 2 explains how to create, develop and maintain a Python package.',
     author='François Durand',
     license='BSD',
     author_email='fradurand@gmail.com',
-    url='https://github.com/francois-durand/package-helper',
+    url='https://github.com/francois-durand/package_helper_2',
     keywords=['cookiecutter', 'template', 'package', ],
     python_requires='>=3.6',
     classifiers=[

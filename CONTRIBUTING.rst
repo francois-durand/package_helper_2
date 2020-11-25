@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/francois-durand/package_helper/issues.
+Report bugs at https://github.com/francois-durand/package_helper_2/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +38,14 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Package Helper could always use more documentation, whether as part of the
-official Package Helper docs, in docstrings, or even on the web in blog posts,
+Package Helper 2 could always use more documentation, whether as part of the
+official Package Helper 2 docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/francois-durand/package_helper/issues.
+The best way to send feedback is to file an issue at https://github.com/francois-durand/package_helper_2/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `package_helper` for local development.
+Ready to contribute? Here's how to set up `package_helper_2` for local development.
 
-1. Fork the `package_helper` repo on GitHub.
+1. Fork the `package_helper_2` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/package_helper.git
+    $ git clone git@github.com:your_name_here/package_helper_2.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv package_helper
-    $ cd package_helper/
+    $ mkvirtualenv package_helper_2
+    $ cd package_helper_2/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -79,7 +79,7 @@ Ready to contribute? Here's how to set up `package_helper` for local development
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-    $ flake8 package_helper tests
+    $ flake8 package_helper_2 tests
     $ python setup.py test or py.test
     $ tox
 
@@ -102,8 +102,8 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 3.6, 3.7 and 3.8, and for PyPy. Check
-   https://travis-ci.org/francois-durand/package_helper/pull_requests
+3. The pull request should work for Python 3.6, 3.7 and 3.8,. Check
+   https://github.com/francois-durand/package_helper_2/actions
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -111,7 +111,7 @@ Tips
 
 To run a subset of tests::
 
-$ py.test tests.test_package_helper
+$ py.test tests.test_package_helper_2
 
 
 Deploying
@@ -125,4 +125,4 @@ $ bumpversion patch # possible: major / minor / patch
 $ git push
 $ git push --tags
 
-Travis will then deploy to PyPI if tests pass.
+GitHub will then deploy to PyPI if tests pass.
