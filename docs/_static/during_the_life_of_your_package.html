@@ -12,7 +12,9 @@
             <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>
             and in the Reference section of the documentation.
         </p></li>
-        <li><p>Generate the documentation locally in order to check that it is working.</p></li>
+        <li><p>Generate the documentation (in PyCharm and/or with GitHub actions) in order to check that it is
+            working.
+        </p></li>
         <li><p>If you were working on a secondary branch (which is desirable), do what you have to do: pull request to
             master, etc.</p></li>
         <li><p>Ensure that you are now in the <em>master</em> branch.</p></li>
@@ -37,13 +39,12 @@
             </ul>
         </li>
         <li><p>Commit/push.</p></li>
-        <li><p>Check that the documentation compiles on GitHub actions.</p></li>
     </ol>
     <p>On <a href="https://github.com">GitHub's website</a>:</p>
     <ol class="arabic">
         <li><p>Go to “releases”.</p></li>
         <li><p>Select “Draft a new release”.</p></li>
-        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">v0.1.0</span></code>)
+        <li><p>Add a tag name (e.g. <code class="docutils literal notranslate"><span class="pre">0.1.0</span></code>)
             and a message (e.g.
             <code class="docutils literal notranslate"><span class="pre">First stable version</span></code>).
         </p></li>
@@ -59,10 +60,10 @@
     <h3>If the Deployment on PyPI Fails...</h3>
     <p><em>Check that the readme will be correctly rendered on PyPI.</em></p>
     <p>In a terminal:</p>
-    <div class="highlight-default notranslate"><div class="highlight"><pre>
-        <span class="n">python setup.py bdist</span>
-        <span class="n">twine check dist/the_name_of_the_file.zip</span>
-    </pre></div></div>
+    <div class="highlight-default notranslate"><div class="highlight">
+<pre><span class="n">python setup.py bdist</span>
+<span class="n">twine check dist/the_name_of_the_file.zip</span></pre>
+    </div></div>
     <p>where <code class="docutils literal notranslate"><span class="pre">the_name_of_the_file</span></code>
         must be replaced by the relevant file name.
     </p>
@@ -79,8 +80,8 @@
         <li><p>In the file <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>:
             add the shortcut.
         </p></li>
-        <li><p>In the file <code class="docutils literal notranslate"><span class="pre">reference.rst</span></code>:
-            add the auto-documentation.
+        <li><p>In the directory <code class="docutils literal notranslate"><span class="pre">reference</span></code>
+            of the documentation: add the auto-documentation.
         </p></li>
     </ol>
 </div>

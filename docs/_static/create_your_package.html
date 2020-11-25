@@ -24,7 +24,7 @@
                 </code></p></li>
                 <li><p>Answer the questions. Here is an example (some explanations follow):</p>
                     <div class="highlight-default notranslate"><div class="highlight">
-<pre><span class="n">full_name [F. Durand]: François Durand</span>
+<pre><span class="n">full_name [François Durand]: François Durand</span>
 <span class="n">email [fradurand@gmail.com]: fradurand@gmail.com</span>
 <span class="n">github_username [francois-durand]: francois-durand</span>
 <span class="n">project_name [Python Boilerplate]: My Toy Package</span>
@@ -62,7 +62,8 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
             bit later). For this reason, in all cases, I suggest to answer <em>yes</em>.
         </p></li>
         <li><p><code class="docutils literal notranslate"><span class="pre">use_codecov</span></code>: you use Codecov
-            to assess the coverage of your code by your tests.
+            to assess the coverage of your code by your tests. I suggest answering <em>yes</em> anyway, even if you
+            do not plan to use Codecov for the moment.
         </p></li>
         <li><p><code class="docutils literal notranslate"><span class="pre">Click</span></code>
             and <code class="docutils literal notranslate"><span class="pre">Argparse</span></code> allow you
@@ -115,19 +116,16 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li class="venv"><p>Ensure that your virtual environment is activated: there should be
             <code class="docutils literal notranslate"><span class="pre">(venv)</span></code> at the beginning of
             the line. If not:</p>
-            <div class="highlight-default notranslate"><div class="highlight"><pre>
-                <span class="n">Windows: venv\Scripts\activate</span>
-                <span class="n">Linux:   source venv/bin/activate</span>
-            </pre></div></div>
+            <div class="highlight-default notranslate"><div class="highlight">
+<pre><span class="n">Windows: venv\Scripts\activate</span>
+<span class="n">Linux:   source venv/bin/activate</span></pre>
+            </div></div>
         </li>
         <li><p>
             <code class="docutils literal notranslate"><span class="pre">pip install -r requirements_dev.txt</span>
             </code>
         </p></li>
     </ol>
-    <p><em>Linux users: if cryptography is already installed with apt-get install, you may need to uninstall it before
-        pip-installing the dev requirements.
-    </em></p>
 </div>
 
 
@@ -137,9 +135,9 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         immediately.
     </em></p>
     <p>In PyCharm's terminal, you should still be in the directory of your package. Do:</p>
-    <div class="highlight-default notranslate"><div class="highlight"><pre>
-        <span class="n">python setup.py develop</span>
-    </pre></div>
+    <div class="highlight-default notranslate"><div class="highlight">
+        <pre><span class="n">python setup.py develop</span></pre>
+    </div>
     </div>
 </div>
 
@@ -160,14 +158,9 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li><p>Output: the “build” directory of your project.</p></li>
         <li><p>OK.</p></li>
     </ol>
-    <p>Run this configuration: you should have a warning “Title underline too short”.</p>
-    <ol class="arabic simple">
-        <li><p>Go to the mentioned file and correct the problem.</p></li>
-        <li><p>Run the configuration again: normally, it generates the documentation.</p></li>
-        <li><p>To check the result, you can open the file
-            <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
-        </p></li>
-    </ol>
+    <p>Run this configuration. To check the result, you can open the file
+        <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
+    </p>
     <p><em>The template contains examples of classes, such as the file
         <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
         You can use them as models if you are new to Sphinx documentation.
@@ -197,18 +190,50 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <h3>Create the GitHub Repo</h3>
     <p>In PyCharm:</p>
     <ol class="arabic">
+        <li><p>From the file <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>
+            of your package, copy the short description sentence, e.g.: "My Toy Package is a beautiful package."
+            (you will paste it in the form below).</p></li>
         <li><p>Menu VCS → Import into version control → Share project on GitHub.</p></li>
         <li><p>Fill in the form and validate, e.g.:</p>
-            <div class="highlight-default notranslate"><div class="highlight"><pre>
-                <span class="n">New repository name: my_toy_package</span>
-                <span class="n">Remote name: origin</span>
-                <span class="n">Description: My Toy Package is a beautiful package.</span>
-            </pre></div></div>
+            <div class="highlight-default notranslate"><div class="highlight">
+<pre><span class="n">New repository name: my_toy_package</span>
+<span class="n">Remote name: origin</span>
+<span class="n">Description: My Toy Package is a beautiful package.</span></pre>
+            </div></div>
         </li>
     </ol>
     <p>In a browser, you can go to your <a href="https://github.com">GitHub</a> account to check that everything is
         there.
     </p>
+</div>
+
+
+<div class="github">
+    <h3>GitHub Settings</h3>
+    <p>On the <a href="https://github.com">GitHub</a> page of your package:</p>
+    <ol class="arabic simple">
+        <li><p><em>Tell GitHub Pages that the documentation files are in the "gh-pages" branch of your project:</em></p>
+            <ol class="arabic simple">
+                <li><p>Settings → Options (= main page) → GitHub Pages → Source.</p></li>
+                <li><p>Select "gh-pages".</p></li>
+                <li><p>Save.</p></li>
+            </ol>
+        </li>
+        <li class="pypi"><p><em>Register your PyPI credentials as "secrets", so that GitHub can automatically publish
+            your package on PyPI for you:</em></p>
+            <ol class="arabic simple">
+                <li><p>Settings → Secrets.</p></li>
+                <li><p>Select "New repository secret". Name:
+                    <code class="docutils literal notranslate"><span class="pre">PYPI_USERNAME</span></code>.
+                    Value: your PyPI username.
+                </p></li>
+                <li><p>Select "New repository secret". Name:
+                    <code class="docutils literal notranslate"><span class="pre">PYPI_PASSWORD</span></code>.
+                    Value: your PyPI password.
+                </p></li>
+            </ol>
+        </li>
+    </ol>
 </div>
 
 
@@ -227,13 +252,20 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
             </ol>
         </li>
 
-        <li><p>On the GitHub page of your package:</p>
+        <li><p>Check your GitHub actions:</p>
             <ol class="arabic simple">
-                <li><p>Go to Actions.</p></li>
-                <li><p>The actions should be a success (it may take several minutes): build + docs.</p></li>
-                <li><p>Go to the GitHub Page of your project and check that the documentation is there.</p></li>
+                <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
+                <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
+                    runs the tests of the package. The "docs" actions builds the documentation, and publishes
+                    it online if the branch is "master".</em></p></li>
+            </ol>
+
+        <li><p>Check the documentation:</p>
+            <ol class="arabic simple">
+                <li><p><a href="https://github.com">GitHub</a> page of your package (main page) → in the bottom of the
+                    page, follow the link to your documentation. Check that the documentation is there.</p></li>
                 <li><p>In the table of contents, click on the first page (e.g. <em>My Toy Package</em>). Depending on
-                    your initial choice of options, you should have three to five <em>badges</em>:</p>
+                    your initial choice of options, you should have up to four <em>badges</em>:</p>
                     <ol class="arabic simple">
                         <li class="pypi"><p>PyPI: package or version not found (there will be the version number after
                             your first release).</p></li>
@@ -242,8 +274,8 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
                         <li class="codecov"><p>Codecov: with a percentage.</p></li>
                     </ol>
                 </li>
-                <li><p>In the table of contents, click on <em>Reference</em>. You should see the documentation of the
-                    classes provided by the template.</p></li>
+                <li><p>In the table of contents: Reference → MyClass1. You should see the documentation of the
+                    first example of class provided by the template.</p></li>
             </ol>
         </li>
 
