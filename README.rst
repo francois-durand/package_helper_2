@@ -34,7 +34,7 @@ https://github.com/audreyr/cookiecutter-pypackage/. Here are the main difference
 * Minor tweaks in ``setup.py``.
 * Remove version numbers from ``requirements_dev.txt``.
 
-Documentation: https://francois-durand.github.io/package_helper_2.
+Documentation: https://package-helper-2.readthedocs.io/.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _PyCharm: https://www.jetbrains.com/pycharm
