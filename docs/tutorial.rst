@@ -14,7 +14,8 @@ things will work this way:
 
 * Your project is on GitHub_. When you push modifications:
 
-    * GitHub automatically generates the documentation, and publishes it online if the branch is "master",
+    * GitHub automatically generates the documentation in order to check if it works correctly,
+    * If the branch is "master", Github automatically publishes the documentation online,
     * GitHub automatically runs the unit tests on several versions of Python.
     * Codecov_ displays what parts of the package are covered by the unit tests.
 
@@ -41,6 +42,9 @@ Tick the tools that you want to use:
             <ul style="list-style-type:none">
                 <li><input type="checkbox" checked onchange="switchVisibility(this, 'codecov')"> Codecov: check if
                     the unit tests cover the whole package.</li>
+                <li><input type="checkbox" checked onchange="switchVisibility(this, 'pypi')"> PyPI: make the package
+                    installable with
+                    <code class="docutils literal notranslate"><span class="pre">pip install</span></code>.</li>
             </ul>
             </li>
         </ul>
