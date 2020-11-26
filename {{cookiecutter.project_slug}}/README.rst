@@ -31,11 +31,13 @@
 * Documentation: https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}/.
 {% endif %}
 
+--------
 Features
 --------
 
 * TODO
 
+-------
 Credits
 -------
 
