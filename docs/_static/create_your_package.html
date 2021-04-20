@@ -52,6 +52,9 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
                 </li>
             </ol>
         </li>
+        <li><p>In PyCharm, choose "Open a project" and select the directory of your package: the whole file structure
+            is in there!
+        <p></li>
     </ol>
     <p>Some explanations now:</p>
     <ul class="simple">
@@ -76,9 +79,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
             suggest to answer <em>yes</em>.
         </p></li>
     </ul>
-    <p>In PyCharm, choose "Open a project" and select the directory of your package: the whole file structure is in
-        there!
-    </p>
 </div>
 
 
@@ -209,6 +209,34 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
 
 <div class="github">
+    <h3>Your First Commit</h3>
+
+    <ol class="arabic simple">
+        <li class="github"><p>In PyCharm, make a slight modification, e.g. in the file
+            <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
+            Then commit/push:</p>
+            <ol class="arabic simple">
+                <li><p>Menu VCS → Commit.</p></li>
+                <li><p>Enter a commit message.</p></li>
+                <li><p>Commit → Commit and push.</p></li>
+                <li><p>Push.</p></li>
+            </ol>
+        </li>
+
+        <li><p>Check your GitHub actions:</p>
+            <ol class="arabic simple">
+                <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
+                <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
+                    runs the tests of the package. The "docs" actions builds the documentation, and publishes
+                    it online if the branch is "master".</em></p></li>
+            </ol>
+        </li>
+
+    </ol>
+</div>
+
+
+<div class="github">
     <h3>GitHub Settings</h3>
     <p>On the <a href="https://github.com">GitHub</a> page of your package:</p>
     <ol class="arabic simple">
@@ -216,6 +244,7 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
             <ol class="arabic simple">
                 <li><p>Settings → Options (= main page) → GitHub Pages → Source.</p></li>
                 <li><p>Select "gh-pages".</p></li>
+                <li><p>Select "/docs".</p></li>
                 <li><p>Save.</p></li>
             </ol>
         </li>
@@ -241,25 +270,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <h3>Check That Everything Is Working</h3>
 
     <ol class="arabic simple">
-        <li class="github"><p>In PyCharm, make a slight modification, e.g. in the file
-            <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
-            Then commit/push:</p>
-            <ol class="arabic simple">
-                <li><p>Menu VCS → Commit.</p></li>
-                <li><p>Enter a commit message.</p></li>
-                <li><p>Commit → Commit and push.</p></li>
-                <li><p>Push.</p></li>
-            </ol>
-        </li>
-
-        <li><p>Check your GitHub actions:</p>
-            <ol class="arabic simple">
-                <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
-                <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
-                    runs the tests of the package. The "docs" actions builds the documentation, and publishes
-                    it online if the branch is "master".</em></p></li>
-            </ol>
-
         <li><p>Check the documentation:</p>
             <ol class="arabic simple">
                 <li><p><a href="https://github.com">GitHub</a> page of your package (main page) → near the bottom of the
