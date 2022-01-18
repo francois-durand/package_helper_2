@@ -93,7 +93,8 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li><p>Choose "Open a project" and select the directory of your package.</p></li>
         <li><p>A prompt window named "Creating Virtual Environment" opens. If you want to create a virtual environment,
         validate with the default options. Otherwise, cancel.</p></li>
-        <li><p>In the bottom right part of the window, if "No Interpreter" appears, click on it and select the desired
+        <li><p>In the bottom right part of the window, the interpreter should be indicated: something like
+            "Python X.X (your_package)". If "No Interpreter" appears instead, click on it and select the desired
             interpreter (virtual environment or not).</p></li>
     </ol>
 </div>
@@ -215,33 +216,25 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
 
 <div class="github">
-    <h3>Your First Commit</h3>
-
-    <ol class="arabic simple">
-        <li class="github"><p>In PyCharm, make a slight modification, e.g. in the file
-            <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
-            Then commit/push:</p>
-            <ol class="arabic simple">
-                <li><p>Menu VCS → Commit.</p></li>
-                <li><p>Enter a commit message.</p></li>
-                <li><p>Commit → Commit and push.</p></li>
-                <li><p>Push.</p></li>
-            </ol>
-        </li>
-    </ol>
-</div>
-
-
-<div class="github">
     <h3>GitHub Settings</h3>
     <p>On the <a href="https://github.com">GitHub</a> page of your package:</p>
     <ol class="arabic simple">
         <li><p><em>Tell GitHub Pages that the documentation files are in the "gh-pages" branch of your project:</em></p>
             <ol class="arabic simple">
-                <li><p>Settings → Options (= main page) → GitHub Pages → Source.</p></li>
+                <li><p>Settings → Pages → Source.</p></li>
                 <li><p>Select "gh-pages".</p></li>
-                <li><p>Select "/docs".</p></li>
+                <li><p>Select "/ (root)".</p></li>
                 <li><p>Save.</p></li>
+            </ol>
+        </li>
+        <li class=""codecov><p><em>Configure Codecov:</em></p>
+            <ol class="arabic simple">
+                <li><p>On your <a href="https://codecov.io">Codecov</a> page: Not yet setup → select your project.
+                    Then copy the Codecov token.</p></li>
+                <li><p>Back to GitHub: Settings → Secrets → New repository secret. Name:
+                    <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code>. Value:
+                    paste the codecov token.
+                </p></li>.
             </ol>
         </li>
         <li class="pypi"><p><em>Register your PyPI credentials as "secrets", so that GitHub can automatically publish
@@ -256,6 +249,24 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
                     <code class="docutils literal notranslate"><span class="pre">PYPI_PASSWORD</span></code>.
                     Value: your PyPI password.
                 </p></li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+
+<div class="github">
+    <h3>Your First Commit</h3>
+
+    <ol class="arabic simple">
+        <li class="github"><p>In PyCharm, make a slight modification, e.g. in the file
+            <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
+            Then commit/push:</p>
+            <ol class="arabic simple">
+                <li><p>Menu VCS → Commit.</p></li>
+                <li><p>Enter a commit message.</p></li>
+                <li><p>Commit → Commit and push.</p></li>
+                <li><p>Push.</p></li>
             </ol>
         </li>
     </ol>
@@ -298,3 +309,5 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
     <p class="pypi">If you wish, you are now ready to release your first version (cf. below).</p>
 </div>
+
+
