@@ -1,0 +1,2 @@
+This file is here to avoid that git ignores this directory in "Package Helper 2".
+It should not be deleted from "Package Helper 2", but it can be safely deleted from your package.
