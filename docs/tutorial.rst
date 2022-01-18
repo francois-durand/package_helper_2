@@ -11,6 +11,7 @@ things will work this way:
 
     * Generate the documentation of your package locally,
     * Run the unit tests.
+    * Generate a local html page displaying what parts of the package are covered by the unit tests.
 
 * Your project is on GitHub_. When you push modifications:
 

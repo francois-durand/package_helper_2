@@ -30,6 +30,7 @@ https://github.com/audreyr/cookiecutter-pypackage/. Here are the main difference
 
 * Use a GitHub action (instead of Travis CI) to perform unit tests.
 * Use a GitHub action (instead of Travis CI) to deploy the package on PyPI.
+* Generate a local html page displaying the test coverage.
 * Use Codecov.
 * Minor tweaks in ``setup.py``.
 * Remove version numbers from ``requirements_dev.txt``.
