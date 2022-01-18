@@ -16,7 +16,7 @@ things will work this way:
 * Your project is on GitHub_. When you push modifications:
 
     * GitHub automatically generates the documentation in order to check if it works correctly,
-    * If the branch is "master", Github automatically publishes the documentation online,
+    * If the branch is "main", Github automatically publishes the documentation online,
     * GitHub automatically runs the unit tests on several versions of Python.
     * Codecov_ displays what parts of the package are covered by the unit tests.
 
