@@ -90,9 +90,11 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     </em></p>
     <p>In PyCharm:</p>
     <ol class="arabic simple">
-        <li><p>Choose "Open a project" and select the directory of your package.</p></li>
+        <li><p>Choose "Open" and select the directory of your package.</p></li>
         <li><p>A prompt window named "Creating Virtual Environment" opens. If you want to create a virtual environment,
         validate with the default options. Otherwise, cancel.</p></li>
+        <li><p>In the bottom right part of the window, you will probably see some background tasks running. Wait until
+        they are finished.</p></li>
         <li><p>In the bottom right part of the window, the interpreter should be indicated: something like
             "Python X.X (your_package)". If "No Interpreter" appears instead, click on it and select the desired
             interpreter (virtual environment or not).</p></li>
@@ -196,22 +198,11 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 <span class="n">Description: My Toy Package is a beautiful package.</span></pre>
             </div></div>
         </li>
+        <li><p>Accept to add all the files as proposed by PyCharm.</p></li>
     </ol>
     <p>In a browser, you can go to your <a href="https://github.com">GitHub</a> account to check that everything is
         there.
     </p>
-</div>
-
-
-<div class="github">
-    <h3>Check your GitHub Actions</h3>
-    <p>In GitHub:</p>
-    <ol class="arabic simple">
-        <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
-        <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
-            runs the tests of the package. The "docs" actions builds the documentation, and publishes
-            it online if the branch is "main".</em></p></li>
-    </ol>
 </div>
 
 
@@ -263,9 +254,9 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
             <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>.
             Then commit/push:</p>
             <ol class="arabic simple">
-                <li><p>Menu VCS → Commit.</p></li>
+                <li><p>Menu Git → Commit.</p></li>
                 <li><p>Enter a commit message.</p></li>
-                <li><p>Commit → Commit and push.</p></li>
+                <li><p>Commit and push.</p></li>
                 <li><p>Push.</p></li>
             </ol>
         </li>
@@ -277,6 +268,14 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <h3>Check That Everything Is Working</h3>
 
     <ol class="arabic simple">
+        <li><p>Check your GitHub Actions:</p>
+            <ol class="arabic simple">
+                <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
+                <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
+                    runs the tests of the package. The "docs" actions builds the documentation, and publishes
+                    it online if the branch is "main".</em></p></li>
+            </ol>
+
         <li><p>Check the documentation:</p>
             <ol class="arabic simple">
                 <li><p><a href="https://github.com">GitHub</a> page of your package (main page) → near the bottom of the
@@ -299,7 +298,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li class="codecov"><p>On <a href="https://codecov.io">Codecov's website</a>:</p>
             <ol class="arabic simple">
                 <li><p>Log in with your GitHub account.</p></li>
-                <li><p>Click on your name.</p></li>
                 <li><p>Select your package.</p></li>
                 <li><p>Once GitHub has finished the "build" action, you can navigate in your project to see what parts
                     of the code are covered by the tests.</p></li>
