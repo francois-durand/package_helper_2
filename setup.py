@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
     name='package_helper_2',
     packages=[],
-    version='0.1.3',
+    version='0.1.4',
     description='Package Helper 2 explains how to create, develop and maintain a Python package.',
     author='François Durand',
     license='BSD',
