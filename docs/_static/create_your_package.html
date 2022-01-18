@@ -52,9 +52,8 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
                 </li>
             </ol>
         </li>
-        <li><p>In PyCharm, choose "Open a project" and select the directory of your package: the whole file structure
-            is in there!
-        <p></li>
+        <li>Optionally, in your file manager, open the directory of your package: the whole file structure
+            is now in there!</li>
     </ol>
     <p>Some explanations now:</p>
     <ul class="simple">
@@ -82,21 +81,20 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 </div>
 
 
-<div class="venv">
-    <h3>Create a Virtual Environment</h3>
+<div>
+    <h3>Open Your Project and Create a Virtual Environment (or not)</h3>
     <p><em>A virtual environment is essentially a Python installation dedicated to your project, with its own versions
         of the third-party packages. It ensures that if you reuse this project several months later, it will still
-        work…
+        work… However, it can be difficult to use in conjunction with Jupyter Notebook. If using Jupyter is important,
+        I suggest that you do not use virtual environments.
     </em></p>
     <p>In PyCharm:</p>
     <ol class="arabic simple">
-        <li><p>Menu File → Settings → Project → Project Interpreter. (For Apple users: PyCharm → Preferences →
-            Project → Project Interpreter.)
-        </p></li>
-        <li><p>Click on the gear-shaped icon → Add.</p></li>
-        <li><p>Fill in the form: New environment using Virtualenv. This directory proposed is just fine.
-            Validate.
-        </p></li>
+        <li><p>Choose "Open a project" and select the directory of your package.</p></li>
+        <li><p>A prompt window named "Creating Virtual Environment" opens. If you want to create a virtual environment,
+        validate with the default options. Otherwise, cancel.</p></li>
+        <li><p>In the bottom right part of the window, if "No Interpreter" appears, click on it and select the desired
+            interpreter (virtual environment or not).</p></li>
     </ol>
 </div>
 
@@ -146,9 +144,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <h3>Add a Run Configuration for the Documentation</h3>
     <p>In PyCharm:</p>
     <ol class="arabic simple">
-        <li><p>In the root of your project, add a directory named
-            <code class="docutils literal notranslate"><span class="pre">build</span></code>.
-        </p></li>
         <li><p>Menu Run → Edit Configurations.</p></li>
         <li><p>Plus icon (top left) → Python docs → Sphinx task.</p></li>
         <li><p>Give a name to the configuration, e.g.
@@ -156,7 +151,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         </p></li>
         <li><p>Input: the “docs” directory of your project.</p></li>
         <li><p>Output: the “build” directory of your project.</p></li>
-        <li><p>OK.</p></li>
     </ol>
     <p>Run this configuration. To check the result, you can open the file
         <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
@@ -177,7 +171,7 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li><p>Give a name to the configuration, e.g.
             <code class="docutils literal notranslate"><span class="pre">All tests</span></code>.
         </p></li>
-        <li><p>Ignore the warning and validate.</p></li>
+        <li><p>Ignore the warning.</p></li>
     </ol>
     <p>Run this configuration: normally, it runs all the tests of the project.</p>
     <p><em>If you are new to testing, you can take example from the classes provided by the template, such as
@@ -193,7 +187,7 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         <li><p>From the file <code class="docutils literal notranslate"><span class="pre">README.rst</span></code>
             of your package, copy the short description sentence, e.g.: "My Toy Package is a beautiful package."
             (you will paste it in the form below).</p></li>
-        <li><p>Menu VCS → Import into version control → Share project on GitHub.</p></li>
+        <li><p>Menu VCS → Share project on GitHub.</p></li>
         <li><p>Fill in the form and validate, e.g.:</p>
             <div class="highlight-default notranslate"><div class="highlight">
 <pre><span class="n">New repository name: my_toy_package</span>
@@ -205,6 +199,18 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <p>In a browser, you can go to your <a href="https://github.com">GitHub</a> account to check that everything is
         there.
     </p>
+</div>
+
+
+<div class="github">
+    <h3>Check your GitHub Actions</h3>
+    <p>In GitHub:</p>
+    <ol class="arabic simple">
+        <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
+        <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
+            runs the tests of the package. The "docs" actions builds the documentation, and publishes
+            it online if the branch is "main".</em></p></li>
+    </ol>
 </div>
 
 
@@ -222,16 +228,6 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
                 <li><p>Push.</p></li>
             </ol>
         </li>
-
-        <li><p>Check your GitHub actions:</p>
-            <ol class="arabic simple">
-                <li><p><a href="https://github.com">GitHub</a> page of your package → Actions.</p></li>
-                <li><p>Check that the actions are successes (it may take several minutes). <em>The "build" action
-                    runs the tests of the package. The "docs" actions builds the documentation, and publishes
-                    it online if the branch is "master".</em></p></li>
-            </ol>
-        </li>
-
     </ol>
 </div>
 
