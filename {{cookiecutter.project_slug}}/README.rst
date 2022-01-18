@@ -19,7 +19,7 @@
 
 {% if cookiecutter.use_codecov == 'y' %}
 .. image:: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/master/graphs/badge.svg
-        :target: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/master/graphs
+        :target: https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/tree/master
         :alt: Code Coverage
 {% endif %}
 
