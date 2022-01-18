@@ -2,6 +2,16 @@
 History
 =======
 
+----------------------------------
+0.1.4 (2022-01-18): Local Coverage
+----------------------------------
+
+* Generate a local html page displaying the test coverage.
+* The "build" folder for the documentation is created when generating the file structure of the package.
+* Change the default branch from "master" to "main".
+* Update the tutorial to fit with the current versions of PyCharm, GitHub and Codecov.
+* Several minor updates in the tutorial.
+
 ------------------------------------------
 0.1.3 (2020-11-25): Fix deployment on PyPI
 ------------------------------------------
