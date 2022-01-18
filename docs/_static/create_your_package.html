@@ -180,6 +180,10 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
     <p><em>If you are new to testing, you can take example from the classes provided by the template, such as
         <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
     </em></p>
+    <p><em>You can open the file
+        <code class="docutils literal notranslate"><span class="pre">cov/index.html</span></code>
+        to check what parts of your code are covered by the tests.
+    </em></p>
 </div>
 
 
@@ -232,8 +236,9 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
         </li>
         <li class=""codecov><p><em>Configure Codecov:</em></p>
             <ol class="arabic simple">
-                <li><p>On your <a href="https://codecov.io">Codecov</a> page: Not yet setup → select your project.
-                    Then copy the Codecov token.</p></li>
+                <li><p>
+                    On <a href="https://codecov.io">Codecov's website</a>, log in with your GitHub account. On your main
+                    page: Not yet setup → select your project. Then copy the Codecov token.</p></li>
                 <li><p>Back to GitHub: Settings → Secrets → New repository secret. Name:
                     <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code>. Value:
                     paste the codecov token.
@@ -300,10 +305,8 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
         <li class="codecov"><p>On <a href="https://codecov.io">Codecov's website</a>:</p>
             <ol class="arabic simple">
-                <li><p>Log in with your GitHub account.</p></li>
                 <li><p>Select your package.</p></li>
-                <li><p>Once GitHub has finished the "build" action, you can navigate in your project to see what parts
-                    of the code are covered by the tests.</p></li>
+                <li><p>You can navigate in your project to see what parts  of the code are covered by the tests.</p></li>
             </ol>
         </li>
     </ol>
