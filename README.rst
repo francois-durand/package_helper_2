@@ -41,4 +41,4 @@ Documentation: https://package-helper-2.readthedocs.io/.
 .. _PyCharm: https://www.jetbrains.com/pycharm
 .. _GitHub: https://github.com
 .. _PyPI: https://pypi.python.org/pypi
-.. _Codecov: https://codecov.io
+.. _Codecov: https://app.codecov.io/gh/
