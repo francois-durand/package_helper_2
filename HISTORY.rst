@@ -2,6 +2,13 @@
 History
 =======
 
+--------------------------------------
+0.1.5 (2022-01-20): Run Configurations
+--------------------------------------
+
+* Cookiecutter generates automatically the run configurations for PyCharm: "All tests" and "Generate docs".
+* It is now possible to choose "main" or "master" as the default git branch.
+
 ----------------------------------
 0.1.4 (2022-01-18): Local Coverage
 ----------------------------------
