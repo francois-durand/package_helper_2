@@ -144,47 +144,25 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
 
 <div>
-    <h3>Add a Run Configuration for the Documentation</h3>
-    <p>In PyCharm:</p>
+    <h3>Check That Everything Is Working Locally</h3>
     <ol class="arabic simple">
-        <li><p>Menu Run → Edit Configurations.</p></li>
-        <li><p>Plus icon (top left) → Python docs → Sphinx task.</p></li>
-        <li><p>Give a name to the configuration, e.g.
-            <code class="docutils literal notranslate"><span class="pre">Generate docs</span></code>.
+        <li><p>In PyCharm: menu Run → Run → All Tests. It runs all the tests of the project. <em>If you are
+            new to testing, you can take example from the classes provided by the template, such as
+            <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.</em>
         </p></li>
-        <li><p>Input: the “docs” directory of your project.</p></li>
-        <li><p>Output: the “build” directory of your project.</p></li>
+        <li><p>Open the file <code class="docutils literal notranslate"><span class="pre">cov/index.html</span></code>
+            (in your web browser). It displays what parts of your code are covered by the tests.
+        </p></li>
+        <li><p>
+            In PyCharm: menu Run → Run → Generate docs. It generates the html documentation of your project.
+            To check the result, open the file
+            <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
+            <em>The template contains examples of classes, such as the file
+            <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
+            You can use them as models if you are new to Sphinx documentation.</em>
+        </p></li>
     </ol>
-    <p>Run this configuration. To check the result, you can open the file
-        <code class="docutils literal notranslate"><span class="pre">build/index.html</span></code>.
-    </p>
-    <p><em>The template contains examples of classes, such as the file
-        <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
-        You can use them as models if you are new to Sphinx documentation.
-    </em></p>
-</div>
-
-
 <div>
-    <h3>Add a Run Configuration for the Unit Tests</h3>
-    <p>In PyCharm:</p>
-    <ol class="arabic simple">
-        <li><p>Menu Run → Edit Configurations.</p></li>
-        <li><p>Add a new configuration by clicking the + button → Python tests → pytest.</p></li>
-        <li><p>Give a name to the configuration, e.g.
-            <code class="docutils literal notranslate"><span class="pre">All tests</span></code>.
-        </p></li>
-        <li><p>Ignore the warning.</p></li>
-    </ol>
-    <p>Run this configuration: normally, it runs all the tests of the project.</p>
-    <p><em>If you are new to testing, you can take example from the classes provided by the template, such as
-        <code class="docutils literal notranslate"><span class="pre">my_class_1.py</span></code>.
-    </em></p>
-    <p><em>You can open the file
-        <code class="docutils literal notranslate"><span class="pre">cov/index.html</span></code>
-        to check what parts of your code are covered by the tests.
-    </em></p>
-</div>
 
 
 <div class="github">
@@ -280,7 +258,7 @@ you need to create a Python package.]: My Toy Package is a beautiful package.</s
 
 
 <div class="github">
-    <h3>Check That Everything Is Working</h3>
+    <h3>Check That Everything Is Working Online</h3>
 
     <ol class="arabic simple">
         <li><p><a href="https://github.com">GitHub</a> page of your package → Actions. Wait until your actions
